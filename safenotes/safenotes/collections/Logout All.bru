@@ -1,0 +1,25 @@
+meta {
+  name: Logout All
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:8080/auth/logout-all
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "refreshToken": "LMPxaZB_CYbBcLkSsM4VzeyFOBZa7cgUa9poB5t1FHQ"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

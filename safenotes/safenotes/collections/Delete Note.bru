@@ -1,0 +1,26 @@
+meta {
+  name: Delete Note
+  type: http
+  seq: 10
+}
+
+delete {
+  url: http://localhost:8080/notes/1
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "title": "minha anotacao atualizada joao",
+    "content": "deu certo!"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
